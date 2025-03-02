@@ -14,25 +14,242 @@
 </head>
 
 <body>
+    <!-- navigation bar -->
     <nav>
         <div class="logo">
             <p>farm2cart</p>
         </div>
 
         <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="contactUs.html">Contact Us</a></li>
-            <li><a href="#">Cart</a></li>
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="about.html" target="_blank">About Us</a></li>
+            <li><a href="contactUs.html" target="_blank">Contact Us</a></li>
+            <li><a href="#" target="_blank">Cart</a></li>
         </ul>
-
-        <input class="nav-input" type="text" placeholder="Search Here...">
+        <div class="search-icon">
+            <input class="nav-input" type="text" placeholder="Search Here...">
+            <img src="img/serachicon.png" alt="">
+        </div>
 
         <div class="button">
             <a href="login.html" target="_blank"><button class="nav-button">Login</button></a>
-            <a href="#" target="_blank"><button class="nav-button">Sign In</button></a>
+            <a href="#" target="_blank"><button class="nav-button">Sign Up</button></a>
         </div>
-    </nav>
-</body>
 
+    </nav>
+
+    <!-- background image containing tagline and button -->
+    <div class="tagline">
+        <p>Fresh, Organic, and Local - Just for You!!</p>
+        <a href=""><button class="shop-now">Shop Now</button></a>
+    </div>
+
+<!-- vendor -->
+
+
+    <div class="vendors">
+        <h2> Our Vendors</h2>
+        <p>Bringing you the freshest, handpicked vegetables straight from trusted local farmers, ensuring quality, affordability, and convenience—because healthy eating starts with the best ingredients! </p>
+    </div>
+
+    <div class="sellers">
+        <!-- Vendor 1 -->
+        <div class="vendor-card" id="vendor-card-1">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Mandar Borade</p>
+                <div class="final-rating" id="rating-display-1">★★★★☆ <span>(4.2/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-1" name="rating-1" value="5">
+                    <label for="star5-1">★</label>
+                    <input type="radio" id="star4-1" name="rating-1" value="4">
+                    <label for="star4-1">★</label>
+                    <input type="radio" id="star3-1" name="rating-1" value="3">
+                    <label for="star3-1">★</label>
+                    <input type="radio" id="star2-1" name="rating-1" value="2">
+                    <label for="star2-1">★</label>
+                    <input type="radio" id="star1-1" name="rating-1" value="1">
+                    <label for="star1-1">★</label>
+                </div>
+                <a href="vendorProduct.html"><button class="vendor-info-button">Details</button></a>
+            </div>
+        </div>
+    
+        <!-- Vendor 2 -->
+        <div class="vendor-card" id="vendor-card-2">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Rahul Sharma</p>
+                <div class="final-rating" id="rating-display-2">★★★☆☆ <span>(3.5/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-2" name="rating-2" value="5">
+                    <label for="star5-2">★</label>
+                    <input type="radio" id="star4-2" name="rating-2" value="4">
+                    <label for="star4-2">★</label>
+                    <input type="radio" id="star3-2" name="rating-2" value="3">
+                    <label for="star3-2">★</label>
+                    <input type="radio" id="star2-2" name="rating-2" value="2">
+                    <label for="star2-2">★</label>
+                    <input type="radio" id="star1-2" name="rating-2" value="1">
+                    <label for="star1-2">★</label>
+                </div>
+                <a href="#"><button class="vendor-info-button">Details</button></a>
+            </div>
+        </div>
+    
+        <!-- Vendor 3 -->
+        <div class="vendor-card" id="vendor-card-3">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Priya Deshmukh</p>
+                <div class="final-rating" id="rating-display-3">★★★★☆ <span>(4.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-3" name="rating-3" value="5">
+                    <label for="star5-3">★</label>
+                    <input type="radio" id="star4-3" name="rating-3" value="4">
+                    <label for="star4-3">★</label>
+                    <input type="radio" id="star3-3" name="rating-3" value="3">
+                    <label for="star3-3">★</label>
+                    <input type="radio" id="star2-3" name="rating-3" value="2">
+                    <label for="star2-3">★</label>
+                    <input type="radio" id="star1-3" name="rating-3" value="1">
+                    <label for="star1-3">★</label>
+                </div>
+                <a href="#"><button class="vendor-info-button">Details</button></a>
+            </div>
+        </div>
+    
+        
+        <!-- Vendor 4 -->
+        <div class="vendor-card" id="vendor-card-4">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Sneha Joshi</p>
+                <div class="final-rating" id="rating-display-4">★★★★★ <span>(5.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-4" name="rating-4" value="5">
+                    <label for="star5-4">★</label>
+                    <input type="radio" id="star4-4" name="rating-4" value="4">
+                    <label for="star4-4">★</label>
+                    <input type="radio" id="star3-4" name="rating-4" value="3">
+                    <label for="star3-4">★</label>
+                    <input type="radio" id="star2-4" name="rating-4" value="2">
+                    <label for="star2-4">★</label>
+                    <input type="radio" id="star1-4" name="rating-4" value="1">
+                    <label for="star1-4">★</label>
+                </div>
+                <a href="#"><button class="vendor-info-button">Details</button></a>
+            </div>
+        </div>
+    
+        <div class="vendor-card" id="vendor-card-5">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Vendor 5</p>
+                <div class="final-rating" id="rating-display-5">★★★☆☆ <span>(3.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-5" name="rating-5" value="5">
+                    <label for="star5-5">★</label>
+                    <input type="radio" id="star4-5" name="rating-5" value="4">
+                    <label for="star4-5">★</label>
+                    <input type="radio" id="star3-5" name="rating-5" value="3">
+                    <label for="star3-5">★</label>
+                    <input type="radio" id="star2-5" name="rating-5" value="2">
+                    <label for="star2-5">★</label>
+                    <input type="radio" id="star1-5" name="rating-5" value="1">
+                    <label for="star1-5">★</label>
+                </div>
+                <button class="vendor-info-button">Details</button>
+            </div>
+        </div>
+        <div class="vendor-card" id="vendor-card-5">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Vendor 6</p>
+                <div class="final-rating" id="rating-display-5">★★★☆☆ <span>(3.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-6" name="rating-6" value="5">
+                    <label for="star5-6">★</label>
+                    <input type="radio" id="star4-6" name="rating-6" value="4">
+                    <label for="star4-6">★</label>
+                    <input type="radio" id="star3-6" name="rating-6" value="3">
+                    <label for="star3-6">★</label>
+                    <input type="radio" id="star2-6" name="rating-6" value="2">
+                    <label for="star2-6">★</label>
+                    <input type="radio" id="star1-6" name="rating-6" value="1">
+                    <label for="star1-6">★</label>
+                </div>
+                <button class="vendor-info-button">Details</button>
+            </div>
+        </div>
+        <div class="vendor-card" id="vendor-card-5">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Vendor 7</p>
+                <div class="final-rating" id="rating-display-5">★★★☆☆ <span>(3.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-7" name="rating-7" value="5">
+                    <label for="star5-7">★</label>
+                    <input type="radio" id="star4-7" name="rating-7" value="4">
+                    <label for="star4-7">★</label>
+                    <input type="radio" id="star3-7" name="rating-7" value="3">
+                    <label for="star3-7">★</label>
+                    <input type="radio" id="star2-7" name="rating-7" value="2">
+                    <label for="star2-7">★</label>
+                    <input type="radio" id="star1-7" name="rating-6" value="1">
+                    <label for="star1-7">★</label>
+                </div>
+                <button class="vendor-info-button">Details</button>
+            </div>
+        </div>
+    
+        <!-- Vendor 8 -->
+        <div class="vendor-card" id="vendor-card-8">
+            <img src="img/profileimage.jpeg" alt="vendor">
+            <div class="vendor-details">
+                <p>Name: Vendor 8</p>
+                <div class="final-rating" id="rating-display-8">★★★★★ <span>(5.0/5)</span></div>
+                <div class="stars">
+                    <input type="radio" id="star5-8" name="rating-8" value="5">
+                    <label for="star5-8">★</label>
+                    <input type="radio" id="star4-8" name="rating-8" value="4">
+                    <label for="star4-8">★</label>
+                    <input type="radio" id="star3-8" name="rating-8" value="3">
+                    <label for="star3-8">★</label>
+                    <input type="radio" id="star2-8" name="rating-8" value="2">
+                    <label for="star2-8">★</label>
+                    <input type="radio" id="star1-8" name="rating-8" value="1">
+                    <label for="star1-8">★</label>
+                </div>
+                <button class="vendor-info-button">Details</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Loop through all vendor cards (1 to 8)
+    for (let i = 1; i <= 8; i++) {
+        const stars = document.querySelectorAll(`input[name="rating-${i}"]`);
+        const finalRating = document.getElementById(`rating-display-${i}`);
+
+        stars.forEach((star) => {
+            star.addEventListener("change", function () {
+                const selectedRating = this.value; // Get selected rating
+                updateFinalRating(finalRating, selectedRating);
+            });
+        });
+    }
+
+    function updateFinalRating(element, rating) {
+        let starsDisplay = "★".repeat(rating) + "☆".repeat(5 - rating);
+        element.innerHTML = `${starsDisplay} <span>(${rating}/5)</span>`;
+    }
+});
+
+</script>
 </html>
