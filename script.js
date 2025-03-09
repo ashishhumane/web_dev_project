@@ -1,7 +1,12 @@
+
+
     // modal box 
     const dialog = document.getElementById('dialog-box'); //target the dialog box using DOM 
 
-    const form = document.querySelector('submitform') //target the form box using DOM 
+    const form = document.querySelector('submitform'); //target the form box using DOM 
+    
+    const closeModal = document.getElementById('close-modal');
+
 
     function openDialogbox() {
         dialog.showModal(); // to show modal box on clicking login button from nav bar
@@ -9,17 +14,25 @@
     function closeModalBox() {
         dialog.close(); // to close modal box using close button on clicking
     }
+    function closeMyModal(){
+        dialog.close();
+    }
 
+
+    // closeModal.addEventListener('click',() => {
+    //     dialog.close();
+    // })
+    
     // container.addEventListener('click', function (e) {
     //     if (!container.contains(e.target)) {
     //         dialog.close();   ignore it
     //     }
     // })
 
-    form.addEventListener('submit', function (s) {
-        s.preventDefault();
-        dialog.close(); // submit form using login button inside form
-    })
+    // form.addEventListener('submit', function (s) {
+    //     s.preventDefault();
+    //     dialog.close(); // submit form using login button inside form
+    // })
 
     //below is code for rating system 
 
@@ -42,3 +55,28 @@
             element.innerHTML = `${starsDisplay} <span>(${rating}/5)</span>`;
         }
     });
+
+
+    
+    function openSideBar(){
+        const sideBar = document.querySelector('.slider');
+        sideBar.style.display = 'flex'
+    }
+    function closeSideBar(){
+        const sideBar = document.querySelector('.slider');
+        sideBar.style.display = 'none'
+    }
+    
+// cart page
+
+const cartButton = document.querySelectorAll('.cart-button')
+const id = document.getElementById('1')
+console.log(cartButton);
+
+cartButton.forEach(function(b){
+    b.addEventListener('click',function(e){
+       if(e.target === id){
+        console.log(id)
+       }
+    })
+})

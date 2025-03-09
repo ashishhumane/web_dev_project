@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    
+
     <nav>
         <div class="logo">
             <p>farm2cart</p>
@@ -39,96 +39,98 @@
         </div>
     </nav>
 
-        <!-- code of modal box  -->
+    <!-- code of modal box  -->
 
-        <dialog id="dialog-box">
-            <dialog></dialog> <!--tag is inbuild tag for modal box*/ -->
-            <h2>login</h2>
-            <form id="submitform">
-                <input type="text" placeholder="username">
-                <input type="password" placeholder="password">
-                <div class="buttons">
-                    <button class="login">login</button>
-                    <button onclick=closeModalBox() class="cancel">cancel</button>
-                </div>
-                <a href="#">Forget password</a>
-            </form>
-        </dialog>
+    <dialog id="dialog-box">
+        <!--<dialog></dialog> tag is for modal box*/ -->
+        <img id="close-modal" onclick=closeMyModal() src="img/final.png" alt="">
+        <h2>Login</h2>
+        <form id="submitform">
+            <input class="input1" type="text" placeholder="username">
+            <input class="input2" type="password" placeholder="password">
+            <a class="forgot-password" href="#">Forgot password</a>
+            <div class="buttons">
+                <button class="login">Login</button>
+                <!-- <button onclick=closeModalBox() class="cancel">cancel</button> -->
+            </div>
+            <span class="para">Not registered?</span><a href="">Create an account</a>
+        </form>
+    </dialog>
 
-</div>
+    </div>
 
-<div class="content">
-    <h2>Our Products</h2>
-    <p>Quality You Can Taste, Freshness You Can See!</p>
-</div>
-<div class="product-list">
-    <div class="item" id="item-1">
-        <img src="img/carrots.jpeg" alt="Carrot" class="images">
-        <div class="product-details">
-            <p>Price:</p>Rs.60/kg
-            <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
-                        alt="">Cart</button></a>
+    <div class="content">
+        <h2>Our Products</h2>
+        <p>Quality You Can Taste, Freshness You Can See!</p>
+    </div>
+    <div class="product-list">
+        <div class="item" id="item-1">
+            <img src="img/carrots.jpeg" alt="Carrot" class="images">
+            <div class="product-details">
+                <p>Price:</p>Rs.60/kg
+                <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
+                            alt="">Cart</button></a>
+            </div>
+        </div>
+        <div class="item" id="item-2">
+            <img src="img/tomato.jpeg" alt="Tomatos" class="images">
+            <div class="product-details">
+                <p>Price:</p>Rs.60/kg
+                <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
+                            alt="">Cart</button></a>
+            </div>
+        </div>
+        <div class="item" id="item-3">
+            <img src="img/potatos.jpeg" alt="Potatos" class="images">
+            <div class="product-details">
+                <p>Price:</p>Rs.90/kg
+                <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
+                            alt="">Cart</button></a>
+            </div>
+        </div>
+        <div class="item" id="item-4">
+            <img src="img/bellpepper.jpeg" alt="Bell Pepper" class="images">
+            <div class="product-details">
+                <p>Price:</p>Rs.20/kg
+                <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
+                            alt="">Cart</button></a>
+            </div>
+        </div>
+        <div class="item" id="item-5">
+            <img src="img/cabbage.jpeg" alt=" Cabbage" class="images">
+            <div class="product-details">
+                <p>Price:</p>Rs.30/kg
+                <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
+                            alt="">Cart</button></a>
+            </div>
+        </div>
+        <div class="item" id="item-6">
+            <img src="img/peas.jpeg" alt="PGreen peas" class="images">
+            <div class="product-details">
+                <p>Price:</p>Rs.60/kg
+                <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
+                            alt="">Cart</button></a>
+            </div>
+        </div>
+        <div class="item" id="item-7">
+            <img src="img/mangoes.jpeg" alt="Mangoes" class="images">
+            <div id="1" class="product-details">
+                <p>Price:</p>Rs.250/dozon
+                <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
+                            alt="">Cart</button></a>
+            </div>
+        </div>
+        <div id="2" class="item" id="item-8">
+            <img src="img/Bananas.jpeg" alt="Bananas" class="images">
+            <div class="product-details">
+                <p>Price:</p>Rs.60/Dozon
+                <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
+                            alt="">Cart</button></a>
+            </div>
         </div>
     </div>
-    <div class="item" id="item-2">
-        <img src="img/tomato.jpeg" alt="Tomatos" class="images">
-        <div class="product-details">
-            <p>Price:</p>Rs.60/kg
-            <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
-                        alt="">Cart</button></a>
-        </div>
-    </div>
-    <div class="item" id="item-3">
-        <img src="img/potatos.jpeg" alt="Potatos" class="images">
-        <div class="product-details">
-            <p>Price:</p>Rs.90/kg
-            <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
-                        alt="">Cart</button></a>
-        </div>
-    </div>
-    <div class="item" id="item-4">
-        <img src="img/bellpepper.jpeg" alt="Bell Pepper" class="images">
-        <div class="product-details">
-            <p>Price:</p>Rs.20/kg
-            <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
-                        alt="">Cart</button></a>
-        </div>
-    </div>
-    <div class="item" id="item-5">
-        <img src="img/cabbage.jpeg" alt=" Cabbage" class="images">
-        <div class="product-details">
-            <p>Price:</p>Rs.30/kg
-            <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
-                        alt="">Cart</button></a>
-        </div>
-    </div>
-    <div class="item" id="item-6">
-        <img src="img/peas.jpeg" alt="PGreen peas" class="images">
-        <div class="product-details">
-            <p>Price:</p>Rs.60/kg
-            <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
-                        alt="">Cart</button></a>
-        </div>
-    </div>
-    <div class="item" id="item-7">
-        <img src="img/mangoes.jpeg" alt="Mangoes" class="images">
-        <div class="product-details">
-            <p>Price:</p>Rs.250/dozon
-            <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
-                        alt="">Cart</button></a>
-        </div>
-    </div>
-    <div class="item" id="item-8">
-        <img src="img/Bananas.jpeg" alt="Bananas" class="images">
-        <div class="product-details">
-            <p>Price:</p>Rs.60/Dozon
-            <a href=""><button class="cart-button"><img src="img/shopping_cart_ecommerce_icon_264023.png"
-                        alt="">Cart</button></a>
-        </div>
-    </div>
-</div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

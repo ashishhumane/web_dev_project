@@ -38,21 +38,23 @@
         </div>
     </nav>
 
-        <!-- code of modal box  -->
+    <!-- code of modal box  -->
 
-        <dialog id="dialog-box">
-            <dialog></dialog> <!--tag is inbuild tag for modal box*/ -->
-            <h2>login</h2>
-            <form id="submitform">
-                <input type="text" placeholder="username">
-                <input type="password" placeholder="password">
-                <div class="buttons">
-                    <button class="login">login</button>
-                    <button onclick=closeModalBox() class="cancel">cancel</button>
-                </div>
-                <a href="#">Forget password</a>
-            </form>
-        </dialog>
+    <dialog id="dialog-box">
+        <!--<dialog></dialog> tag is for modal box*/ -->
+        <img id="close-modal" onclick=closeMyModal() src="img/final.png" alt="">
+        <h2>Login</h2>
+        <form id="submitform">
+            <input class="input1" type="text" placeholder="username">
+            <input class="input2" type="password" placeholder="password">
+            <a class="forgot-password" href="#">Forgot password</a>
+            <div class="buttons">
+                <button class="login">Login</button>
+                <!-- <button onclick=closeModalBox() class="cancel">cancel</button> -->
+            </div>
+            <span class="para">Not registered?</span><a href="">Create an account</a>
+        </form>
+    </dialog>
 
     <div class="overlay">
         <h2>CONTACT US</h2>

@@ -25,6 +25,35 @@
             <li><a href="about.html" target="_blank">About Us</a></li>
             <li><a href="contactUs.html" target="_blank">Contact Us</a></li>
             <li><a href="#" target="_blank">Cart</a></li>
+
+        </ul>
+
+        <div class="search-icon">
+            <input class="nav-input" type="text" placeholder="Search Here...">
+            <img src="img/serachicon.png" alt="">
+        </div>
+
+
+        <div class="button">
+            <a target=""><button onclick=openDialogbox() class="nav-button">Login</button></a>
+            <a href="#" target="_blank"><button class="nav-button">Sign Up</button></a>
+        </div>
+
+        <img class="toggle" src="img/bars.png" alt="">
+
+        <!-- toggle menu -->
+
+        <div class="slider">
+            <img class="closeBar" src="img/close.png" alt=""">
+            <div class=" logo">
+            <p>farm2cart</p>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="about.html" target="_blank">About Us</a></li>
+            <li><a href="contactUs.html" target="_blank">Contact Us</a></li>
+            <li><a href="#" target="_blank">Cart</a></li>
+
         </ul>
 
         <div class="search-icon">
@@ -36,23 +65,26 @@
             <a target=""><button onclick=openDialogbox() class="nav-button">Login</button></a>
             <a href="#" target="_blank"><button class="nav-button">Sign Up</button></a>
         </div>
+        </div>
     </nav>
 
-        <!-- code of modal box  -->
+    <!-- code of modal box  -->
 
-        <dialog id="dialog-box">
-            <dialog></dialog> <!--tag is inbuild tag for modal box*/ -->
-            <h2>login</h2>
-            <form id="submitform">
-                <input type="text" placeholder="username">
-                <input type="password" placeholder="password">
-                <div class="buttons">
-                    <button class="login">login</button>
-                    <button onclick=closeModalBox() class="cancel">cancel</button>
-                </div>
-                <a href="#">Forget password</a>
-            </form>
-        </dialog>
+    <dialog id="dialog-box">
+        <!--<dialog></dialog> tag is for modal box*/ -->
+        <img id="close-modal" onclick=closeMyModal() src="img/final.png" alt="">
+        <h2>Login</h2>
+        <form id="submitform">
+            <input class="input1" type="text" placeholder="username">
+            <input class="input2" type="password" placeholder="password">
+            <a class="forgot-password" href="#">Forgot password</a>
+            <div class="buttons">
+                <button class="login">Login</button>
+                <!-- <button onclick=closeModalBox() class="cancel">cancel</button> -->
+            </div>
+            <span class="para">Not registered?</span><a href="">Create an account</a>
+        </form>
+    </dialog>
 
     <div class="about-us-content">
         <h1>About Us</h1>
@@ -154,7 +186,35 @@
             <p>&copy; 2025 Vegetable Market | All Rights Reserved</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        const dialog = document.getElementById('dialog-box'); //target the dialog box using DOM 
+
+        const form = document.querySelector('submitform'); //target the form box using DOM 
+
+        const closeModal = document.getElementById('close-modal');
+
+
+        function openDialogbox() {
+            dialog.showModal(); // to show modal box on clicking login button from nav bar
+        }
+        function closeModalBox() {
+            dialog.close(); // to close modal box using close button on clicking
+        }
+        function closeMyModal() {
+            dialog.close();
+        }
+        const toggleButton = document.querySelector('.toggle')
+        const closeButton = document.querySelector('.closeBar')
+        toggleButton.addEventListener('click', function () {
+            const sideBar = document.querySelector('.slider')
+            sideBar.style.display = 'flex';
+        })
+        closeButton.addEventListener('click', function () {
+            const sideBar = document.querySelector('.slider')
+            sideBar.style.display = '';
+        })
+
+    </script>
 
 </body>
 

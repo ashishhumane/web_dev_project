@@ -47,16 +47,18 @@
     <!-- code of modal box  -->
 
     <dialog id="dialog-box">
-        <dialog></dialog> <!--tag is inbuild tag for modal box*/ -->
-        <h2>login</h2>
+        <!--<dialog></dialog> tag is for modal box*/ -->
+        <img id="close-modal" onclick=closeMyModal() src="img/final.png" alt="">
+        <h2>Login</h2>
         <form id="submitform">
-            <input type="text" placeholder="username">
-            <input type="password" placeholder="password">
+            <input class="input1" type="text" placeholder="username">
+            <input class="input2" type="password" placeholder="password">
+            <a class="forgot-password" href="#">Forgot password</a>
             <div class="buttons">
-                <button class="login">login</button>
-                <button onclick=closeModalBox() class="cancel">cancel</button>
+                <button class="login">Login</button>
+                <!-- <button onclick=closeModalBox() class="cancel">cancel</button> -->
             </div>
-            <a href="#">Forget password</a>
+            <span class="para">Not registered?</span><a href="">Create an account</a>
         </form>
     </dialog>
 
@@ -242,6 +244,43 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>
+                    We connect local vegetable vendors with customers, providing fresh
+                    produce at the best prices.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Vendors</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: support@farm2cart.com</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vegetable Market | All Rights Reserved</p>
+        </div>
+    </footer>
 
 
 
