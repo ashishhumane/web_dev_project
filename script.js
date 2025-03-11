@@ -5,8 +5,6 @@ const form = document.querySelector('submitform'); //target the form box using D
 
 const closeModal = document.getElementById('close-modal');
 
-const signup = document.getElementsByClassName('nav-button')
-
 function openDialogbox() {
     dialog.showModal(); // to show modal box on clicking login button from nav bar
 }
@@ -15,6 +13,54 @@ function closeModalBox() {
 }
 function closeMyModal() {
     dialog.close();
+}
+
+// signup modal 
+const signupForm = document.getElementById('submit-Signup-form')
+const openSignupModal = document.getElementById('dialog-box-signup')
+const signUpButton = document.getElementById('signup-button-2')
+const closeSignupModal = document.getElementById('closeSignup')
+
+signUpButton.addEventListener('click', function () {
+    openSignupModal.showModal()
+})
+closeSignupModal.addEventListener('click', function () {
+    openSignupModal.close()
+})
+
+const goToLogin = document.querySelector('.redirect-to-login')
+
+goToLogin.addEventListener('click', function () {
+    openDialogbox();
+    openSignupModal.close();
+})
+
+const goToSignup = document.querySelector('.redirect-to-signup')
+
+goToSignup.addEventListener('click', function () {
+    openSignupModal.showModal();
+    closeModalBox()
+})
+
+
+// validate form 
+signupForm.addEventListener('submit', function (e) {
+    e.preventDefault()
+    validate()
+})
+
+function validate() {
+    let name = document.querySelector('.name')
+    let username = document.querySelector('.username').value.trim()
+    let email = document.querySelector('.email').value.trim()
+    let password = document.querySelector('.password').value.trim()
+
+    if (name.value.trim() === '') {
+        name.style.border = '1px solid red'
+    } else {
+
+        name.style.border = '1px solid green'
+    }
 }
 
 // rating
@@ -50,13 +96,18 @@ function closeSideBar() {
     sideBar.style.display = 'none'
 }
 
-// login validation
-const username = document.querySelector('.input1')
-const password = document.querySelector('.input2')
+const toggleButton = document.querySelector('.toggle')
+        const closeButton = document.querySelector('.closeBar')
+        toggleButton.addEventListener('click', function () {
+            const sideBar = document.querySelector('.slider')
+            sideBar.style.display = 'flex';
+        })
+        closeButton.addEventListener('click', function () {
+            const sideBar = document.querySelector('.slider')
+            sideBar.style.display = '';
+        })
 
-validateForm(){
-    if(username == ''){
-        alert("enter username")
-    }
-}
+// login validation
+
+
 

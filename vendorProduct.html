@@ -35,7 +35,7 @@
 
         <div class="button">
             <a target=""><button onclick=openDialogbox() class="nav-button">Login</button></a>
-            <a href="#" target="_blank"><button class="nav-button">Sign Up</button></a>
+            <a target=""><button type="button" id="signup-button-2" class="nav-button">Sign Up</button></a>
         </div>
     </nav>
 
@@ -50,10 +50,30 @@
             <input class="input2" type="password" placeholder="password">
             <a class="forgot-password" href="#">Forgot password</a>
             <div class="buttons">
-                <button class="login">Login</button>
+                <button type="submit" class="login">Login</button>
                 <!-- <button onclick=closeModalBox() class="cancel">cancel</button> -->
             </div>
-            <span class="para">Not registered?</span><a href="">Create an account</a>
+            <span class="para">Not registered?</span><a class="redirect-to-signup" href="#dialog-box-signup">Create an account</a>
+        </form>
+    </dialog>
+
+    <!-- signup page dialog box -->
+
+    <dialog id="dialog-box-signup">
+        <!--<dialog></dialog> tag is for modal box*/ -->
+        <img id="closeSignup" src="img/final.png" alt="">
+        <h2>Sign Up</h2>
+        <form id="submit-Signup-form">
+            <input class="name" type="text" placeholder="Name">
+            <input class="username" type="text" placeholder="Username">
+            <input class="email" type="email" placeholder="Email">
+            <input class="password" type="password" placeholder="Password">
+            <input class="con-pass" type="password" placeholder="Confirm Password">
+            <div class="buttons">
+
+                <button type="submit" class="sign-up">Sign Up</button>
+            </div>
+            <span class="para">Already have a account?</span><a href="#dialog-box" class="redirect-to-login">Login</a>
         </form>
     </dialog>
 

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about us</title>
+    <!-- <link rel="stylesheet" href=""> -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +37,7 @@
 
         <div class="button">
             <a target=""><button onclick=openDialogbox() class="nav-button">Login</button></a>
-            <a href="#" target="_blank"><button class="nav-button">Sign Up</button></a>
+            <a target=""><button type="button" id="signup-button-2" class="nav-button">Sign Up</button></a>
         </div>
 
         <img class="toggle" src="img/bars.png" alt="">
@@ -63,7 +64,7 @@
 
         <div class="button">
             <a target=""><button onclick=openDialogbox() class="nav-button">Login</button></a>
-            <a href="#" target="_blank"><button class="nav-button">Sign Up</button></a>
+            <a target=""><button type="button" id="signup-button-2" class="nav-button">Sign Up</button></a>
         </div>
         </div>
     </nav>
@@ -79,10 +80,30 @@
             <input class="input2" type="password" placeholder="password">
             <a class="forgot-password" href="#">Forgot password</a>
             <div class="buttons">
-                <button class="login">Login</button>
+                <button type="submit" class="login">Login</button>
                 <!-- <button onclick=closeModalBox() class="cancel">cancel</button> -->
             </div>
-            <span class="para">Not registered?</span><a href="">Create an account</a>
+            <span class="para">Not registered?</span><a class="redirect-to-signup" href="#dialog-box-signup">Create an account</a>
+        </form>
+    </dialog>
+
+    <!-- signup page dialog box -->
+
+    <dialog id="dialog-box-signup">
+        <!--<dialog></dialog> tag is for modal box*/ -->
+        <img id="closeSignup" src="img/final.png" alt="">
+        <h2>Sign Up</h2>
+        <form id="submit-Signup-form">
+            <input class="name" type="text" placeholder="Name">
+            <input class="username" type="text" placeholder="Username">
+            <input class="email" type="email" placeholder="Email">
+            <input class="password" type="password" placeholder="Password">
+            <input class="con-pass" type="password" placeholder="Confirm Password">
+            <div class="buttons">
+
+                <button type="submit" class="sign-up">Sign Up</button>
+            </div>
+            <span class="para">Already have a account?</span><a href="#dialog-box" class="redirect-to-login">Login</a>
         </form>
     </dialog>
 
@@ -186,33 +207,34 @@
             <p>&copy; 2025 Vegetable Market | All Rights Reserved</p>
         </div>
     </footer>
+    <script src="script.js"></script>
     <script>
-        const dialog = document.getElementById('dialog-box'); //target the dialog box using DOM 
+        // const dialog = document.getElementById('dialog-box'); //target the dialog box using DOM 
 
-        const form = document.querySelector('submitform'); //target the form box using DOM 
+        // const form = document.querySelector('submitform'); //target the form box using DOM 
 
-        const closeModal = document.getElementById('close-modal');
+        // const closeModal = document.getElementById('close-modal');
 
 
-        function openDialogbox() {
-            dialog.showModal(); // to show modal box on clicking login button from nav bar
-        }
-        function closeModalBox() {
-            dialog.close(); // to close modal box using close button on clicking
-        }
-        function closeMyModal() {
-            dialog.close();
-        }
-        const toggleButton = document.querySelector('.toggle')
-        const closeButton = document.querySelector('.closeBar')
-        toggleButton.addEventListener('click', function () {
-            const sideBar = document.querySelector('.slider')
-            sideBar.style.display = 'flex';
-        })
-        closeButton.addEventListener('click', function () {
-            const sideBar = document.querySelector('.slider')
-            sideBar.style.display = '';
-        })
+        // function openDialogbox() {
+        //     dialog.showModal(); // to show modal box on clicking login button from nav bar
+        // }
+        // function closeModalBox() {
+        //     dialog.close(); // to close modal box using close button on clicking
+        // }
+        // function closeMyModal() {
+        //     dialog.close();
+        // }
+        // const toggleButton = document.querySelector('.toggle')
+        // const closeButton = document.querySelector('.closeBar')
+        // toggleButton.addEventListener('click', function () {
+        //     const sideBar = document.querySelector('.slider')
+        //     sideBar.style.display = 'flex';
+        // })
+        // closeButton.addEventListener('click', function () {
+        //     const sideBar = document.querySelector('.slider')
+        //     sideBar.style.display = '';
+        // })
 
     </script>
 

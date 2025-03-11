@@ -24,7 +24,7 @@
             <li><a href="index.html" target="_blank">Home</a></li>
             <li><a href="about.html" target="_blank">About Us</a></li>
             <li><a href="contactUs.html" target="_blank">Contact Us</a></li>
-            <li><a href="#" target="_blank">Cart</a></li>
+            <li><a href="cart.html" target="_blank">Cart</a></li>
         </ul>
         <div class="search-icon">
             <input class="nav-input" type="text" placeholder="Search Here...">
@@ -32,8 +32,8 @@
         </div>
 
         <div class="button">
-            <a target=""><button onclick=openDialogbox() class="nav-button">Login</button></a>
-            <a href="#" target="_blank"><button class="nav-button">Sign Up</button></a>
+            <a target=""><button type="button" onclick=openDialogbox() class="nav-button">Login</button></a>
+            <a target=""><button type="button" id="signup-button-2" class="nav-button">Sign Up</button></a>
         </div>
 
     </nav>
@@ -41,7 +41,7 @@
     <!-- background image containing tagline and button -->
     <div class="tagline">
         <p>Fresh, Organic, and Local - Just for You!!</p>
-        <a href=""><button class="shop-now">Shop Now</button></a>
+        <a href="#vendons-section"><button class="shop-now">Shop Now</button></a>
     </div>
 
     <!-- code of modal box  -->
@@ -55,10 +55,30 @@
             <input class="input2" type="password" placeholder="password">
             <a class="forgot-password" href="#">Forgot password</a>
             <div class="buttons">
-                <button class="login">Login</button>
+                <button type="submit" class="login">Login</button>
                 <!-- <button onclick=closeModalBox() class="cancel">cancel</button> -->
             </div>
-            <span class="para">Not registered?</span><a href="">Create an account</a>
+            <span class="para">Not registered?</span><a class="redirect-to-signup" href="#dialog-box-signup">Create an account</a>
+        </form>
+    </dialog>
+
+    <!-- signup page dialog box -->
+
+    <dialog id="dialog-box-signup">
+        <!--<dialog></dialog> tag is for modal box*/ -->
+        <img id="closeSignup" src="img/final.png" alt="">
+        <h2>Sign Up</h2>
+        <form id="submit-Signup-form">
+            <input class="name" type="text" placeholder="Name">
+            <input class="username" type="text" placeholder="Username">
+            <input class="email" type="email" placeholder="Email">
+            <input class="password" type="password" placeholder="Password">
+            <input class="con-pass" type="password" placeholder="Confirm Password">
+            <div class="buttons">
+
+                <button type="submit" class="sign-up">Sign Up</button>
+            </div>
+            <span class="para">Already have a account?</span><a href="#dialog-box" class="redirect-to-login">Login</a>
         </form>
     </dialog>
 
@@ -66,7 +86,7 @@
 
 
     <div class="vendors">
-        <h2> Our Vendors</h2>
+        <h2 id="vendons-section"> Our Vendors</h2>
         <p>Bringing you the freshest, handpicked vegetables straight from trusted local farmers, ensuring quality,
             affordability, and convenience—because healthy eating starts with the best ingredients! </p>
     </div>
@@ -286,6 +306,74 @@
 
 
 </body>
-<script src="script.js"></script>
+<script src="script.js"></script>/
+<!-- <script>
+    // login modal 
+    const dialog = document.getElementById('dialog-box'); //target the dialog box using DOM 
+
+    const form = document.querySelector('submitform'); //target the form box using DOM 
+
+    const closeModal = document.getElementById('close-modal');
+
+    function openDialogbox() {
+        dialog.showModal(); // to show modal box on clicking login button from nav bar
+    }
+    function closeModalBox() {
+        dialog.close(); // to close modal box using close button on clicking
+    }
+    function closeMyModal() {
+        dialog.close();
+    }
+
+    // signup modal 
+    const signupForm = document.getElementById('submit-Signup-form')
+    const openSignupModal = document.getElementById('dialog-box-signup')
+    const signUpButton = document.getElementById('signup-button-2')
+    const closeSignupModal = document.getElementById('closeSignup')
+
+    signUpButton.addEventListener('click', function () {
+        openSignupModal.showModal()
+    })
+    closeSignupModal.addEventListener('click', function () {
+        openSignupModal.close()
+    })
+
+    const goToLogin = document.querySelector('.redirect-to-login')
+    
+    goToLogin.addEventListener('click', function () {
+        openDialogbox();
+        openSignupModal.close();
+    })
+
+    const goToSignup = document.querySelector('.redirect-to-signup')
+
+    goToSignup.addEventListener('click',function(){
+        openSignupModal.showModal();
+        closeModalBox()
+    })
+
+
+    // validate form 
+    signupForm.addEventListener('submit', function (e) {
+        e.preventDefault()
+        validate()
+    })
+
+    function validate() {
+        let name = document.querySelector('.name')
+        let username = document.querySelector('.username').value.trim()
+        let email = document.querySelector('.email').value.trim()
+        let password = document.querySelector('.password').value.trim()
+
+        if (name.value.trim() === '') {
+            name.style.border = '1px solid red'
+        } else {
+
+            name.style.border = '1px solid green'
+        }
+    }
+
+    // const submit = document.getElementsByClassName('sign-up')
+</script> -->
 
 </html>
